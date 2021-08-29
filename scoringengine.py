@@ -40,12 +40,14 @@ def sendStatus(teamName, teamServices):
 """
 
 def runCheck():
+    print("Running checks...")
     for team in teams:
         teamname = team["teamname"]
         teamServices = []
         scoreObjects = team["scoredObjects"]
         for scoreObject in scoreObjects:
             if scoreObject["type"] == "port":
+                print("Checking port pollers.")
                 try:
                     result = pollPort(scoreObject["host"], scoreObject["port"])
                     scoredServiceObject = {}
