@@ -22,8 +22,6 @@ def loadConfig():
     with open("./config.json", "r") as f:
         try:
             loadedConfig = json.load(f)
-            compId = loadedConfig["compId"]
-            apikey = loadedConfig["apikey"]
             teams = loadedConfig["teams"]
         except:
             print("[!] Failed to load config")
