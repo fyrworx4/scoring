@@ -23,6 +23,7 @@ def loadConfig():
         try:
             loadedConfig = json.load(f)
             teams = loadedConfig["teams"]
+            print(teams)
         except:
             print("[!] Failed to load config")
 
