@@ -5,6 +5,7 @@ from ftplib import FTP
 import json
 import subprocess
 import hashlib
+import dns.resolver as dns
 
 """
 Name: pollPort
@@ -29,7 +30,7 @@ Parameters: url - complete url of the page to query (ex. https://192.168.0.1/log
 
 def pollHTTP(url, pageHash):
     try:
-        if(hashlib.md5(requests.get(url, timeout=3).content).hexdigest() == pageHash):
+        if(hashlib.md5(requests.get(url, timeout=10).content).hexdigest() == pageHash):
             return True
         else:
             return False
@@ -74,3 +75,4 @@ def pollFTP(ip, port, users):
         return True
     except:
         return False
+
