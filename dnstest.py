@@ -1,4 +1,4 @@
-import dns.resolver
+import dns
 
 answers = dns.query.udp("telcolab.xyz", "10.100.10.1")
 
