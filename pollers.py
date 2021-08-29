@@ -5,7 +5,7 @@ from ftplib import FTP
 import json
 import subprocess
 import hashlib
-import dns.resolver as dns
+import dns.query as dns
 
 """
 Name: pollPort
@@ -75,4 +75,10 @@ def pollFTP(ip, port, users):
         return True
     except:
         return False
+
+"""
+Name: pollDNS
+Description: Will verify that the FTP service is running on the specific port
+Parameters: ip - ip address to poll, port - port number to poll, users - Array of strings of format "username:password" to verify are valid
+"""
 
