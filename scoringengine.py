@@ -46,6 +46,7 @@ def runCheck():
         teamname = team["teamname"]
         teamServices = []
         scoreObjects = team["scoredObjects"]
+        print(scoreObjects)
         for scoreObject in scoreObjects:
             print(scoreObject)
             if scoreObject["type"] == "port":
