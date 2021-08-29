@@ -17,7 +17,6 @@ apikey = None
 teams = []
 
 def loadConfig():
-    global compId, apikey, teams
     loadedConfig = {}
 
     with open("./config.json", "r") as f:

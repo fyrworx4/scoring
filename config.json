@@ -4,33 +4,13 @@
         "scoredObjects": [
           {
             "type": "port",
-            "host": "192.168.1.6",
-            "port": "80",
-            "displayName": "khakis-http"
+            "host": "10.100.10.145",
+            "port": "80"
           },
           {
             "type": "port",
             "host": "192.168.1.4",
-            "port": "3306",
-            "displayName": "slacks-mysql"
-          },
-          {
-            "type": "port",
-            "host": "192.168.1.5",
-            "port": "80",
-            "displayName": "shinyshoes-http"
-          },
-          {
-            "type": "port",
-            "host": "192.168.1.5",
-            "port": "445",
-            "displayName": "jacket-smb"
-          },
-          {
-            "type": "port",
-            "host": "192.168.1.2",
-            "port": "53",
-            "displayName": "tuxedo-dns"
+            "port": "3306"
           }
         ]
       }]
