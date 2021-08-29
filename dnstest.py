@@ -1,6 +1,6 @@
-import dns.resolver
+import dns.query
 
-answers = dns.resolver.query.udp("telcolab.xyz", "10.100.10.1")
+answers = dns.query.udp("telcolab.xyz", "10.100.10.1")
 
 for rdata in answers:
-    print('asdfasf', data.preference)
+    print('asdfasf', rdata.preference)
