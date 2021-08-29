@@ -26,6 +26,7 @@ def loadConfig():
         except:
             print("[!] Failed to load config")
 
+"""
 def sendStatus(teamName, teamServices):
     r = requests.post('https://ccdcscoring.jimmyli.us/api/competitions/update', json={
         "compId": compId,
@@ -36,6 +37,7 @@ def sendStatus(teamName, teamServices):
     resp = r.json()
     if resp["status"] != "success":
         print("[!] There was a problem while sending the scores")
+"""
 
 def runCheck():
     for team in teams:
@@ -50,6 +52,7 @@ def runCheck():
                     scoredServiceObject["name"] = scoreObject["displayName"]
                     scoredServiceObject["status"] = result
                     teamServices.append(scoredServiceObject)
+                    print("yay")
                 except Exception as e:
                     print("[!] Port poll failed, likely fault in parameters")
                     print("Detailed exception: " + str(e))

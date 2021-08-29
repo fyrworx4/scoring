@@ -5,7 +5,7 @@
           {
             "type": "port",
             "host": "10.100.10.145",
-            "port": "53"
+            "port": "21"
           },
           {
             "type": "port",
