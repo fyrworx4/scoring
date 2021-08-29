@@ -53,11 +53,11 @@ def runCheck():
                 print("Checking port pollers.")
                 try:
                     result = pollPort(scoreObject["host"], scoreObject["port"])
-                    scoredServiceObject = {}
-                    scoredServiceObject["name"] = scoreObject["displayName"]
-                    scoredServiceObject["status"] = result
-                    teamServices.append(scoredServiceObject)
-                    print("yay")
+                    #scoredServiceObject = {}
+                    #scoredServiceObject["name"] = scoreObject["displayName"]
+                    #scoredServiceObject["status"] = result
+                    #teamServices.append(scoredServiceObject)
+                    print("Success")
                 except Exception as e:
                     print("[!] Port poll failed, likely fault in parameters")
                     print("Detailed exception: " + str(e))
