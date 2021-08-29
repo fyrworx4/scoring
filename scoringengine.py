@@ -94,7 +94,7 @@ def runCheck():
             else:
                 print("Unknown poll type, service was skipped")
 
-        sendStatus(teamname, teamServices)
+        #sendStatus(teamname, teamServices)
 
 def main():
     loadConfig()
