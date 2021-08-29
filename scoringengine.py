@@ -23,7 +23,6 @@ def loadConfig():
         try:
             loadedConfig = json.load(f)
             teams = loadedConfig["teams"]
-            print(teams)
         except:
             print("[!] Failed to load config")
 
@@ -44,11 +43,10 @@ def runCheck():
     print("Running checks...")
     for team in teams:
         teamname = team["teamname"]
+        print(teamname)
         teamServices = []
         scoreObjects = team["scoredObjects"]
-        print(scoreObjects)
         for scoreObject in scoreObjects:
-            print(scoreObject)
             if scoreObject["type"] == "port":
                 print("Checking port pollers.")
                 try:
