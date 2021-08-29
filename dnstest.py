@@ -1,5 +1,5 @@
-import dns.query as dns
+import dns.resolver
 
-answers = dns.query('telcolab.xyz', 'A')
+answers = dns.resolver.query('telcolab.xyz', 'A')
 for rdata in answers:
     print('Host', rdata.exchange, 'has preference', rdata.preference)
