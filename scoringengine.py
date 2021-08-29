@@ -46,6 +46,7 @@ def runCheck():
         teamServices = []
         scoreObjects = team["scoredObjects"]
         for scoreObject in scoreObjects:
+            print(scoreObject)
             if scoreObject["type"] == "port":
                 print("Checking port pollers.")
                 try:
