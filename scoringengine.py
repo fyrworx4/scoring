@@ -42,7 +42,7 @@ def sendStatus(teamName, teamServices):
 def runCheck():
     print("Running checks...")
     for team in teams:
-        teamname = team["teamname"]
+        teamname = team[0]
         print(teamname)
         teamServices = []
         scoreObjects = team["scoredObjects"]
