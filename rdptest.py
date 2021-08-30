@@ -5,7 +5,7 @@ password = "Orbitalweapons_1234"
 server = "10.100.10.145"
 port = "3389"
 
-cmd = ['xfreerdp', '--ignore-certificate', '--authonly', '/u:' + username, '/p:' + password, '/v:' + server]
+cmd = ['xfreerdp', '/cert-ignore', '/authonly', '/u:' + username, '/p:' + password, '/v:' + server]
 #cmd.append('{}:{}'.format(server, port))
 
 output = subprocess.check_output(cmd, stderr=subprocess.STDOUT)
