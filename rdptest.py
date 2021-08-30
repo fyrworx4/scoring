@@ -8,4 +8,8 @@ port = "3389"
 cmd = ['xfreerdp', '/cert-ignore', '/auth-only', '/u:' + username, '/p:' + password, '/v:' + server]
 #cmd.append('{}:{}'.format(server, port))
 
-output = subprocess.check_output(cmd, stderr=subprocess.STDOUT)
+try:
+    output = subprocess.check_output(cmd, stderr=subprocess.STDOUT)
+    print("Yay!")
+except Exception as e:
+    print("Rip")
