@@ -4,8 +4,10 @@ def pollRDP(ip, port, user):
     username = user.split(":")[0]
     password = user.split(":")[1]
     cmd = ['xfreerdp', '--ignore-certificate', '--authonly', '-u', username, '-p', password, ip]
-    output = str(subprocess.Popen(cmd, stdout=subprocess.PIPE))[-1]
-    print(output)
+
+    subprocess.call(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+    #output = str(subprocess.Popen(cmd, stdout=subprocess.PIPE))
+    #print(output)
     
 
 #pollRDP("10.100.10.145", "3389", "saulsolper:Orbitalweapons_1234") # True
