@@ -19,3 +19,4 @@ def pollRDP(ip, port, user):
     
 pollRDP("10.100.10.145", "3389", "saulsolper:Orbitalweapons_1234") # True
 pollRDP("10.100.10.135", "3389", "saulsolper:Orbitalweapons_1234") # False
+pollRDP("10.100.10.145", "1337", "saulsolper:Orbitalweapons_1234") # False
