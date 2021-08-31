@@ -7,5 +7,5 @@ def pollRDP(ip, port, user):
     output = subprocess.check_output(cmd, stderr=subprocess.STDOUT)
     print(output)
 
-pollRDP("10.100.10.145", "3389", "saulsolper:Orbitalweapons_1234") # True
-#pollRDP("10.100.10.145", "3329", "saulsolper:Orbitalweapons_1234") # False
+#pollRDP("10.100.10.145", "3389", "saulsolper:Orbitalweapons_1234") # True
+pollRDP("10.100.10.145", "3329", "saulsolper:Orbitalweapons_1234") # False
