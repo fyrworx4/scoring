@@ -7,7 +7,7 @@ def pollRDP(ip, port, user):
     proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     output = proc.communicate()
 
-    if (str(output)[-5]) == 0:
+    if (str(output)[-5]) == "0":
         print(True)
         return True
     else:
