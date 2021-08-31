@@ -10,4 +10,5 @@ def pollRDP(ip, port, users):
     except:
         return False
 
-print(pollRDP("10.100.10.145", "3389", "saulsolper:Orbitalweapons_1234"))
+print(pollRDP("10.100.10.145", "3389", "saulsolper:Orbitalweapons_1234")) # True
+print(pollRDP("10.100.10.145", "3329", "saulsolper:Orbitalweapons_1234")) # False
