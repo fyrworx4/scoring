@@ -8,8 +8,10 @@ def pollRDP(ip, port, user):
     output = proc.communicate()
 
     if (str(output)[-5]) == 0:
+        print(True)
         return True
     else:
+        print(False)
         return False
 
     #cmd = ['xfreerdp', '/cert-ignore', '/auth-only', f'/u:"{username}"', f'/p:"{password}"', f'/v:{ip}']
