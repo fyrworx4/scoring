@@ -1,13 +1,10 @@
 import subprocess
 
-def pollRDP(ip, port, users):
-    for user in users:
-        if ":" not in user:
-            continue
-        username = user.split(":")[0]
-        print(username)
-        password = user.split(":")[1]
-        print(password)
+def pollRDP(ip, port, user):
+    username = user.split(":")[0]
+    print(username)
+    password = user.split(":")[1]
+    print(password)
     cmd = ['xfreerdp', '/cert-ignore', '/auth-only', '/u:"' + username, '" /p:"' + password, '" /v:' + ip]
     output = subprocess.check_output(cmd, stderr=subprocess.STDOUT)
     print(output)
