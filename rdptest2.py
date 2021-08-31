@@ -8,7 +8,7 @@ def pollRDP(ip, port, user):
 
     proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     output = proc.communicate()
-    print(output)
+    print(output[-5])
     #p = subprocess.Popen(cmd, stdout=subprocess.PIPE, close_fds=True)
     #output = p.stdout.read()
     #print(output)
@@ -18,5 +18,5 @@ def pollRDP(ip, port, user):
     #output = str(subprocess.Popen(cmd, stdout=subprocess.PIPE))
     #print(output)
     
-#pollRDP("10.100.10.145", "3389", "saulsolper:Orbitalweapons_1234") # True
+pollRDP("10.100.10.145", "3389", "saulsolper:Orbitalweapons_1234") # True
 pollRDP("10.100.10.135", "3389", "saulsolper:Orbitalweapons_1234") # False
