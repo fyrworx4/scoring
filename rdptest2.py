@@ -1,4 +1,4 @@
-def pollRDP(ip, port, user):
+def pollRDP(ip, port, users):
     try:
         for user in users:
             if ":" not in user:
