@@ -5,7 +5,7 @@ def pollRDP(ip, port, user):
     password = user.split(":")[1]
     cmd = ['xfreerdp', '--ignore-certificate', '--authonly', '-u', username, '-p', password, ip]
 
-    subprocess.call(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+    subprocess.check_output(cmd, stderr=subprocess.STDOUT)
     #output = str(subprocess.Popen(cmd, stdout=subprocess.PIPE))
     #print(output)
     
