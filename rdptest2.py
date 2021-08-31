@@ -8,8 +8,8 @@ def pollRDP(ip, port, user):
     #p = subprocess.Popen(cmd, stdout=subprocess.PIPE, close_fds=True)
     #output = p.stdout.read()
     #print(output)
-
-    output = subprocess.check_output(cmd)
+    cmd_parsed = ' '.join(map(str, cmd))
+    output = subprocess.check_output(cmd_parsed)
     print(output)
     #output = str(subprocess.Popen(cmd, stdout=subprocess.PIPE))
     #print(output)
