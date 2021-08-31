@@ -3,16 +3,15 @@ import subprocess
 def pollRDP(ip, port, user):
     username = user.split(":")[0]
     password = user.split(":")[1]
-    cmd = ['xfreerdp', '--ignore-certificate', '--authonly', '-u', username, '-p', password, ip]
-    #cmd = ['xfreerdp', '/cert-ignore', '/auth-only', f'/u:"{username}"', f'/p:"{password}"', f'/v:{ip}']
-
+    cmd = ['xfreerdp', '--ignore-certificate', '--authonly', '-u', username, '-p', password, f'{ip}:{port}']
     proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     output = proc.communicate()
     print(str(output)[-5])
+
+    #cmd = ['xfreerdp', '/cert-ignore', '/auth-only', f'/u:"{username}"', f'/p:"{password}"', f'/v:{ip}']
     #p = subprocess.Popen(cmd, stdout=subprocess.PIPE, close_fds=True)
     #output = p.stdout.read()
     #print(output)
-
     #output = subprocess.check_output(cmd)
     #print(output)
     #output = str(subprocess.Popen(cmd, stdout=subprocess.PIPE))
