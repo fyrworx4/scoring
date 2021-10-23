@@ -1,5 +1,5 @@
 dnspython
-socket
+sockets
 requests
 os
 ftplib
