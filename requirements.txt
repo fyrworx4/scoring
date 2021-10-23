@@ -2,9 +2,4 @@ dnspython
 sockets
 requests
 path.py
-ftplib
-json
-subprocess
-hashlib
-time
-mysql
+mysql-connector-python
