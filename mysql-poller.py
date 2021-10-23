@@ -6,6 +6,8 @@ mydb = mysql.connector.connect(
   password="yourpassword"
 )
 
+mycursor = mydb.cursor()
+
 mycursor.execute("USE quotes; SELECT * FROM bruh")
 
 for x in mycursor:
