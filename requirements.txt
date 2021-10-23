@@ -1,4 +1,4 @@
-dns
+dnspython
 socket
 requests
 os
