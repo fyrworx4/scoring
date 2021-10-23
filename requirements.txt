@@ -1,0 +1,10 @@
+dns
+socket
+requests
+os
+ftplib
+json
+subprocess
+hashlib
+time
+mysql

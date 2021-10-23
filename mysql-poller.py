@@ -6,4 +6,4 @@ mydb = mysql.connector.connect(
   password="yourpassword"
 )
 
-print(mydb) 
+print(mydb)
